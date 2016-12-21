@@ -45,5 +45,20 @@ namespace MamagermentToolApi.Services
             result = JsonConvert.SerializeObject(resultDTOs);
             return result;
         }
+
+        public string GetFeedDetail(string feedUrl)
+        {
+            string result;
+            /*Get Html document*/
+            string htmDocument = Crawler.getResponse(feedUrl);
+            /*Remove unnecessary*/
+            result = Regex.Replace(htmDocument, Constant.patternReplaceDetailHeader, Constant.replaceDetailStringHeader);
+            result = Regex.Replace(result, Constant.patternReplaceDetailFooter, "");
+            result = Regex.Replace(result, Constant.patternReplaceDetailSuggestFeeds, "");
+            result = Regex.Replace(result, Constant.patternReplaceDetailScript, "");
+            result = Regex.Replace(result, Constant.patternReplaceHomeButton, "");
+            result = Regex.Replace(result, Constant.patternReplaceBottomBar, "");
+            return result;
+        }
     }
 }

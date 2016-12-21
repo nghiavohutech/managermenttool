@@ -13,13 +13,23 @@ namespace MamagermentToolApi.Controllers
     public class BaoMoiCrawlerController : Controller
     {
         BaoMoiCrawlerServices services = new BaoMoiCrawlerServices();
-        // GET api/BaoMoiCrawler/1
-        [HttpGet("{page}")]
+        // GET api/BaoMoiCrawler/GetFeed/{page}
+        [HttpGet("GetFeed/{page}")]
         public string GetFeed(string page)
         {
             string result;
             result = services.GetFeed(page);
             return result;
         }
+
+        // GET api/BaoMoiCrawler/GetFeedDetail/{feedUrl}
+        [HttpPost("GetFeedDetail")]
+        public string GetFeedDetail(string feedUrl)
+        {
+            string result;
+            result = services.GetFeedDetail(feedUrl);
+            return result;
+        }
+
     }
 }
