@@ -1,0 +1,3 @@
+Server name : sqldbweatherserver.database.windows.net
+TK : thachnguyen
+Password : ThachAa123456
