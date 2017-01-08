@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sqldbweatherModelStoreContainer" CdmEntityContainer="sqldbweatherEntities">
+    <EntitySetMapping Name="TWeathers">
+      <EntityTypeMapping TypeName="sqldbweatherModel.TWeather">
+        <MappingFragment StoreEntitySet="TWeather">
+          <ScalarProperty Name="C_id" ColumnName="_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="coord" ColumnName="coord" />
+          <ScalarProperty Name="lon" ColumnName="lon" />
+          <ScalarProperty Name="lat" ColumnName="lat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
