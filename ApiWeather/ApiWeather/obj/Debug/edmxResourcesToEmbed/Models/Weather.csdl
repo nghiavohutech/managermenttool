@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sqldbweatherModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TWeather">
+    <Key>
+      <PropertyRef Name="C_id" />
+    </Key>
+    <Property Name="C_id" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="coord" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lon" Type="Double" />
+    <Property Name="lat" Type="Double" />
+  </EntityType>
+  <EntityContainer Name="sqldbweatherEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TWeathers" EntityType="Self.TWeather" />
+  </EntityContainer>
+</Schema>

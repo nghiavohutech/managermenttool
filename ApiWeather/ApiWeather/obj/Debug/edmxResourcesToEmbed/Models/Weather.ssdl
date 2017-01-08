@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sqldbweatherModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TWeather">
+    <Key>
+      <PropertyRef Name="_id" />
+    </Key>
+    <Property Name="_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="country" Type="nvarchar(max)" />
+    <Property Name="coord" Type="nvarchar(max)" />
+    <Property Name="lon" Type="float" />
+    <Property Name="lat" Type="float" />
+  </EntityType>
+  <EntityContainer Name="sqldbweatherModelStoreContainer">
+    <EntitySet Name="TWeather" EntityType="Self.TWeather" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

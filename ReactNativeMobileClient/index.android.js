@@ -4,50 +4,63 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
-  View
+  TouchableOpacity
 } from 'react-native';
-
-export default class ReactNativeMobileClient extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+import { Container, Header, Title, Text, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+import theme from './theme/light'
+import ToolPaper from './component/tool/index'
+import SignInPaper from './component/sign-in/index'
+class ReactNativeMobileClient extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      viewPaper: <ToolPaper />,
+      activeTabTool: true,
+      activeTabMe: false
+    }
   }
+  activeTabTool() {
+    this.setState({
+    activeTabTool: true,
+    activeTabMe: false
+    });
+  }
+  activeTabMe() {
+    this.setState({
+    activeTabTool: false,
+    activeTabMe: true
+    });
+  }
+ render() {
+   return (
+          <Container theme={theme}>
+            <Header>
+              <Title>Management Tool</Title>
+            </Header>
+          <Content>
+              {this.state.viewPaper}
+          </Content>
+            <Footer>
+              <FooterTab>
+                <Button active = {this.state.activeTabTool} onPress={()=>{this.setState({viewPaper: <ToolPaper />});
+                this.activeTabTool()}}>
+                  Tools
+                  <Icon name="ios-home"></Icon>
+                </Button>
+                <Button active = {this.state.activeTabMe} onPress={()=>{this.setState({viewPaper: <SignInPaper />});
+                this.activeTabMe()}}>
+                  Cá nhân
+                  <Icon name="ios-person"></Icon>
+                </Button>
+              </FooterTab>
+            </Footer>
+          </Container>
+        );
+    }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('ReactNativeMobileClient', () => ReactNativeMobileClient);
