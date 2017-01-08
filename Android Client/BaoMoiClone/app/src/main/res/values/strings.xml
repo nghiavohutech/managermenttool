@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Báo mới</string>
+
+    <!--Strings of home navigation-->
+    <string name="tl_nav_setup">Cài đặt</string>
+    <string name="tl_nav_about">Thông tin</string>
+
+    <!--Navigation annotation-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Tabs title-->
+    <string name="tl_tab_lastest_news">Mới nhất</string>
+    <string name="tl_tab_categories">Chuyên mục</string>
+
+    <!--Categories title-->
+    <string name="tl_cat_tech">Công nghệ</string>
+    <string name="tl_cat_football">Bóng đá</string>
+    <string name="tl_cat_food">Thực phẩm</string>
+    <string name="tl_cat_travel">Du lịch</string>
+
+    <!--Customizing pull to refresh layout header texts -->
+    <string name="cube_ptr_pull_down_to_refresh">Kéo xuống để làm mới</string>
+    <string name="cube_ptr_release_to_refresh">Thả để làm mới</string>
+    <string name="cube_ptr_refreshing">Đang cập nhật...</string>
+    <string name="cube_ptr_refresh_complete">Đã cập nhật!</string>
+    <string name="cube_ptr_pull_down">Kéo xuống</string>
+    <string name="cube_ptr_last_update">Cập nhật lần cuối:&#160;</string>
+    <string name="cube_ptr_seconds_ago">&#160;giây trước</string>
+    <string name="cube_ptr_minutes_ago">&#160;phút trước</string>
+    <string name="cube_ptr_hours_ago">&#160;giờ trước</string>
+
+    <!--Dialog message-->
+    <string name="tl_alert">Thông báo</string>
+    <string name="msg_alert_non_data">Hiện chưa có dữ liệu cho mục này.</string>
+    <string name="tl_alert_app_info">Thông tin ứng dụng</string>
+    <string name="msg_alert_app_info">Đây là phiên bản thử nghiệm còn nhiều thiếu sót mong quý khách thông cảm và góp ý để hoàn thiện hơn.</string>
+
+</resources>
